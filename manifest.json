@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Secure QR",
+  "description": "Encrypt and decrypt QR securely.",
+  "version": "1.0.0",
+  "permissions": ["storage", "downloads"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {}
+  }
+}

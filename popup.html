@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="popup.css" />
+    <title>Secure QR Code Generator</title>
+    <script src="js.QR.min.js"></script>
+  </head>
+  <body>
+    <div class="mainbox">
+      <div id="encoding-screen" class="screen">
+        <h1 class="app-name-label">QR Code Encoder</h1>
+        <div class="text-collection">
+          <input type="text" id="text-input" placeholder="Enter text here" />
+          <input
+            type="password"
+            id="passcode-input"
+            placeholder="Enter passcode"
+          />
+        </div>
+        <button id="generate-btn" class="btn">Generate QR Code</button>
+        <div id="qr-code"></div>
+        <div class="button-container">
+          <button id="download-btn" class="btn" style="display: none">
+            Download QR Code
+          </button>
+        </div>
+        <button id="switch-to-decoding" class="btn">Switch to Decoding</button>
+      </div>
+
+      <div id="decoding-screen" class="screen" style="display: none">
+        <h1 class="app-name-label">QR Code Decoder</h1>
+        <div class="text-collection">
+          <input type="file" id="qr-input" accept="image/*" />
+          <input
+            type="password"
+            id="guess-passcode"
+            placeholder="Enter passcode to decode"
+          />
+        </div>
+        <button id="decode-btn" class="btn">Decode QR Code</button>
+        <div id="decoded-output"></div>
+        <button id="switch-to-encoding" class="btn">Switch to Encoding</button>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
